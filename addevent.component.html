@@ -1,0 +1,19 @@
+<div class="event-form">
+  <label for="event">Event Name:</label>
+  <input id="event" type="text" [(ngModel)]="eventData.title" placeholder="Event name" />
+
+  <label for="time">Time:</label>
+  <input id="time" type="time" [(ngModel)]="eventData.time" />
+
+  <label for="priority">Priority:</label>
+  <select id="priority" [(ngModel)]="eventData.priority">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+
+  <label for="description">Description:</label>
+  <textarea id="description" [(ngModel)]="eventData.description" placeholder="Event description"></textarea>
+
+  <button (click)="submitEvent()">{{ buttonText }}</button>
+</div>
